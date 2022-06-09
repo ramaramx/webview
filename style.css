@@ -66,11 +66,11 @@ canvas {
   /* For mobile phones: */
   canvas {
     z-index: -1;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
- width: 100vw; 
-  height: 100vh;
-  }
+    position: fixed;
+    top: 34%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    width: 80vh;
+    height: 87vh;
+}
 }
