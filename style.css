@@ -115,3 +115,93 @@ canvas {
     height: 100vh;
 }
 } 
+
+/* navbar bottom */
+.layout .feature-section{
+  display: flex;
+      position: absolute;
+      right: 10rem;
+      bottom: 5rem;
+      
+      align-items: center;
+    }
+    .layout .feature-section .navigate {
+      padding: 2px;
+      text-shadow: 0 0 1rem rgb(0 0 0 / 50%);
+  }
+  
+  .layout .lightup, .layout a, .sequence-box a {
+    transition: .4s;
+  }
+  .layout .common-left-text {
+    width: 85vh;
+    transform: rotate(270deg);
+    position: absolute;
+    margin-bottom: 0;
+    left: 3vw;
+    bottom: 0;
+    transform-origin: left top;
+    z-index: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .layout .common-left-text .title {
+    font-family: Lato;
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 0;
+    color: #fff ;
+  }
+  @media (max-width: 767.98px){
+  .layout .feature-section {
+      display: flex;
+      justify-content: right;
+      bottom: unset;
+      width: 100%;
+      text-align: right;
+      left: 0;
+      top: 0;
+      padding-top: 1rem;
+  
+      padding-right: 1.5rem;
+      background: rgba(0,0,0,.33);
+      box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+      -webkit-backdrop-filter: blur(1px);
+      backdrop-filter: blur(1px);
+  }
+  }
+  .layout .common-left-text .text {
+      margin-bottom: 0;
+      display: flex;
+      font-size: .625rem;
+  }
+  
+  .layout .common-left-text .text a {
+      color: #fff;
+      margin: 0 0.25rem;
+  }
+
+/* music */
+  
+#player-container #play-pause {
+  cursor: pointer;
+  text-indent: -999999px;
+  height:40px;
+  width: 40px;
+  padding: 12px 18px;
+  z-index: 2;
+    
+    background-repeat: no-repeat!important;
+    background-position: center;
+    background-size: 16px;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:50px;
+  
+}
+.play {
+  background-image: url(./assets/logo-pauses.png);
+}
+.pause {
+   background-image: url(./assets/logo-pause.png)!important;
+}
