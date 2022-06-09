@@ -3,8 +3,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin:0 auto;  
-  height: 100%;
+  margin: 0 auto;  
+  height: 100vh;
   background-color: black;
   
 }
@@ -32,8 +32,8 @@
 }
 .text {
   position: absolute;
-  top: 0 inherit;
-  font-family:"Mnopolis";
+  top: inherit;
+  font-family:"Monument";
   font-size: 2em;
   opacity: 0;
   color: white;
@@ -46,11 +46,19 @@ canvas {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100vw; 
+ width: 100vw; 
   height: 100vh;
 
 }
-
-#image-scroll{
- position: fixed;
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  canvas {
+    z-index: -1;
+  position: fixed;
+  top: 42%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+ width: 100vw; 
+  height: 100vh;
+  }
 }
