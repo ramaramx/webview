@@ -11,7 +11,7 @@ let tl = gsap.timeline({scrollTrigger: {
 
 let stayTime = 2; // seconds between each text flip on the timeline (not literally seconds on screen - we're just spacing them out on the timeline)
 let textElements = gsap.utils.toArray(".text" ); // get an Array of all the ".text" elements
-let scrolltextElements = gsap.utils.toArray(".scoll-text")
+let scrolltextElements = gsap.utils.toArray(".sticky-text-left")
 
 // loop through each text element and add an autoAlpha flip at the appropriate times on the timeline
 textElements.forEach((el, i) => {
