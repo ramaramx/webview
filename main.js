@@ -16,8 +16,9 @@ const preloadImages = () => {
 
 const img = new Image()
 img.src = currentFrame(1);
-canvas.width=window.innerWidth;
-canvas.height=window.innerHeight;
+canvas.width = document.body.clientWidth;
+canvas.height = document.body.clientHeight;
+
 img.onload=function(){
   context.drawImage(img, 0, 0);
 }
@@ -32,7 +33,7 @@ window.addEventListener('scroll', () => {
   const maxScrollTop = html.scrollHeight - window.innerHeight;
   const scrollFraction = scrollTop / maxScrollTop;
   const frameIndex = Math.min(
-    frameCount - 1,
+    frameCount -1,
     Math.ceil(scrollFraction * frameCount)
   );
   

@@ -1,19 +1,52 @@
-html {
-  height: 100vh;
-}
-
 body {
-  margin: 0 !important;
-  padding: 0 !important;
-  height: 500vh;
-  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: black;
+  
+}
+@font-face {
+    font-family: 'Monument';
+    src: url('https://assets.codepen.io/4086427/MonumentExtended-Bold.otf');
+ }
+@font-face {
+    font-family: 'Rational';
+    src: url('https://assets.codepen.io/4086427/Rene+Bieder+-+RationalDisplayDEMO-SemiBold.otf');
+ }
+@font-face {
+    font-family: 'Rational-light';
+    src: url('https://assets.codepen.io/4086427/RationalDisplay-Light.otf');
+ }
+
+.text-container {
+  position: static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  width: 100%;
+  /*background-color: blue;*/
+}
+.text {
+  position: absolute;
+  top: inherit;
+  font-family:"Monument";
+  font-size: 2em;
+  opacity: 0;
+  color: white;
 }
 
+.scroll-text{
+  
+}
 canvas {
+  z-index: -1;
   position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  max-width: 100vw;
-  max-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+ align-items: center;
 }
