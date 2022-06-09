@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger);
 let tl = gsap.timeline({scrollTrigger: {
     trigger: ".text-container",
     start: 0,
-    end: "+=1000", // stay pinned for 1000 pixels (make this whatever you want)
+    end: "+=5000", // stay pinned for 1000 pixels (make this whatever you want)
     markers: true,
     scrub: true,
     pin: true,

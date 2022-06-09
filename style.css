@@ -1,8 +1,10 @@
-body {
+
+ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  margin:0 auto;  
+  height: 100%;
   background-color: black;
   
 }
@@ -30,23 +32,25 @@ body {
 }
 .text {
   position: absolute;
-  top: inherit;
-  font-family:"Monument";
+  top: 0 inherit;
+  font-family:"Mnopolis";
   font-size: 2em;
   opacity: 0;
   color: white;
 }
 
-.scroll-text{
-  
-}
+
 canvas {
   z-index: -1;
   position: fixed;
-  left: 50%;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  width: 100vw;
+  width: 100vw; 
   height: 100vh;
- align-items: center;
+
+}
+
+#image-scroll{
+ position: fixed;
 }
