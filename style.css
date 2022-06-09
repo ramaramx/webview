@@ -55,8 +55,20 @@ canvas {
   canvas {
     z-index: -1;
   position: fixed;
-  top: 42%;
-  left: 42%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ width: 100vw; 
+  height: 100vh;
+  }
+}
+@media only screen and (max-width: 426px) {
+  /* For mobile phones: */
+  canvas {
+    z-index: -1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
  width: 100vw; 
   height: 100vh;
