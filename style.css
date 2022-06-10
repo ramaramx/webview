@@ -3,10 +3,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  
   margin: 0 auto;  
   height: 100vh;
   background-color: black;
-  font-family: Monument;
+  font-family: 'Monument';
   
 }
 @font-face {
@@ -29,20 +30,23 @@
   align-items: center;
   height: 20vh;
   width: 100%;
+  z-index: 2;
   /*background-color: blue;*/
 }
 .text {
   position: absolute;
   top: inherit;
   font-family:"Monument";
-  font-size: 2em;
+  font-size: 1.5em;
+  margin: 25px;
   opacity: 0;
   color: white;
+  text-align: center;
+  
 }
 .layout {width: 100vw;
   height: 100vh;
-  height: calc(var(--vh,1vh) * 100);
-  padding: 2rem 3rem;
+  padding: 0rem 0rem;
   color: #fff;
   position: fixed;
   z-index: 2;
@@ -53,8 +57,8 @@
   transform: rotate(270deg);
   position: absolute;
   margin-bottom: 0;
-  left: 6vw;
-  bottom: 5vw;
+  left: 2vw;
+  bottom: 2vw;
   transform-origin: left top;
   z-index: 3;
   display: flex;
@@ -63,18 +67,13 @@
 .layout .sticky-text-bottom{
   position: absolute;
     z-index: 3;
-    bottom: 5rem;
+    bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
 }
+.padding-text{
 
-
-
-
-
-
-
-
+}
 .canvas-container {
   position: relative;
   max-width: 1024px;
@@ -82,25 +81,36 @@
   margin: 0 auto;
 }
 canvas {
-  z-index: -1;
+  z-index: 1;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+ width: 100%; 
+  height: 100%;
+
+}
+@media only screen and (max-width: 1024px) {
+  
+  canvas {
+    z-index: -1;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
  width: 100vw; 
   height: 100vh;
-
+  }
 }
 @media only screen and (max-width: 768px) {
   
   canvas {
     z-index: -1;
   position: fixed;
-  top: 50%;
-  left: 50%;
+ 
   transform: translate(-50%, -50%);
- width: 100vw; 
-  height: 100vh;
+ width: 100%; 
+  height: 100%;
   }
 }
 @media only screen and (max-width: 426px) {
@@ -108,22 +118,34 @@ canvas {
   canvas {
     z-index: -1;
     position: fixed;
-    top: 42%;
-    left: 39%;
+    
     transform: translate(-50%, -50%);
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    
+}
+.text {
+  position: absolute;
+  top: inherit;
+  font-family:"Monument";
+  font-size: 0.7rem;
+  opacity: 0;
+  color: white;
+}
+.padding-text{
+  padding-right: 15px;
+  left: 35px;
+  text-align: center;
 }
 } 
 
 /* navbar bottom */
 .layout .feature-section{
   display: flex;
-      position: absolute;
-      right: 10rem;
-      bottom: 5rem;
-      
-      align-items: center;
+  position: absolute;
+  right: 2rem;
+  bottom: 1rem;
+  align-items: center;
     }
     .layout .feature-section .navigate {
       padding: 2px;
@@ -138,7 +160,7 @@ canvas {
     transform: rotate(270deg);
     position: absolute;
     margin-bottom: 0;
-    left: 3vw;
+    left: 2vw;
     bottom: 0;
     transform-origin: left top;
     z-index: 0;
@@ -146,8 +168,8 @@ canvas {
     justify-content: space-between;
   }
   .layout .common-left-text .title {
-    font-family: Lato;
-    font-weight: 600;
+    
+    
     font-size: 1.8rem;
     margin-bottom: 0;
     color: #fff ;
@@ -204,4 +226,55 @@ canvas {
 }
 .pause {
    background-image: url(./assets/logo-pause.png)!important;
+}
+
+/* preloader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#content{
+  
+  display: none;
+  text-align: center;
 }
