@@ -2,9 +2,9 @@ const html = document.documentElement;
 const canvas = document.getElementById("image-scroll");
 const context = canvas.getContext("2d");
 
-const frameCount = 115;
+const frameCount = 400;
 const currentFrame = index => (
-  `./assets/images/${index.toString().padStart(4, '0')}.jpg`
+  `./assets/images/${index.toString().padStart( '1')}.jpg`
 )
 
 const preloadImages = () => {
@@ -41,3 +41,4 @@ window.addEventListener('scroll', () => {
 });
 
 preloadImages()
+

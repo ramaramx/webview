@@ -67,7 +67,7 @@
 .layout .sticky-text-bottom{
   position: absolute;
     z-index: 3;
-    bottom: 2rem;
+    bottom: 0rem;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -76,8 +76,7 @@
 }
 .canvas-container {
   position: relative;
-  max-width: 1024px;
-  min-width: 320px;
+
   margin: 0 auto;
 }
 canvas {
@@ -107,21 +106,19 @@ canvas {
   canvas {
     z-index: -1;
   position: fixed;
- 
   transform: translate(-50%, -50%);
- width: 100%; 
-  height: 100%;
+ width: auto; 
+  height: auto;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 425px) {
 
   canvas {
     z-index: -1;
     position: fixed;
-    
     transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
     
 }
 .text {
@@ -147,7 +144,7 @@ canvas {
   bottom: 1rem;
   align-items: center;
     }
-    .layout .feature-section .navigate {
+  .layout .feature-section .navigate {
       padding: 2px;
       text-shadow: 0 0 1rem rgb(0 0 0 / 50%);
   }
@@ -174,22 +171,19 @@ canvas {
     margin-bottom: 0;
     color: #fff ;
   }
-  @media (max-width: 767.98px){
+  @media (max-width: 768px){
   .layout .feature-section {
-      display: flex;
-      justify-content: right;
-      bottom: unset;
-      width: 100%;
-      text-align: right;
-      left: 0;
-      top: 0;
-      padding-top: 1rem;
-  
-      padding-right: 1.5rem;
-      background: rgba(0,0,0,.33);
-      box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
-      -webkit-backdrop-filter: blur(1px);
-      backdrop-filter: blur(1px);
+    display: flex;
+    justify-content: center;
+    bottom: unset;
+    width: 100%;
+    text-align: right;
+    left: auto;
+    top: 0;
+    padding-top: 1rem;
+    box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+    backdrop-filter: blur(1px);
+    align-items: center;
   }
   }
   .layout .common-left-text .text {
@@ -229,16 +223,20 @@ canvas {
 }
 
 /* preloader */
+
 #loader {
-  position: absolute;
+  position: fixed;
+  display: inline-block;
   left: 50%;
   top: 50%;
   z-index: 2;
-  width: 120px;
-  height: 120px;
+  width: 50px;
+  height: 50px;
   margin: -76px 0 0 -76px;
   border: 16px solid #f3f3f3;
   border-radius: 50%;
+  background-image: url(./assets/logo-pause.png);
+  background-size: cover;  
   border-top: 16px solid #3498db;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
