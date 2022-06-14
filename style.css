@@ -42,9 +42,16 @@
   opacity: 0;
   color: white;
   text-align: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 50px;
   
 }
-.layout {width: 100vw;
+
+
+.layout {
+  width: 100vw;
   height: 100vh;
   padding: 0rem 0rem;
   color: #fff;
@@ -52,18 +59,24 @@
   z-index: 2;
   top: 0;
 }
+
+@media (max-width: 767.98px){
+  .layout{padding: 2rem 1.5rem;
+  }
+}
 .layout .sticky-text-left{
-  width: 100vh;
+  width: 85vh;
   transform: rotate(270deg);
   position: absolute;
   margin-bottom: 0;
-  left: 2vw;
-  bottom: 2vw;
+  left: 3vw;
+  bottom: 1vw;
   transform-origin: left top;
   z-index: 3;
   display: flex;
   justify-content: space-between;
 }
+
 .layout .sticky-text-bottom{
   position: absolute;
     z-index: 3;
@@ -71,9 +84,7 @@
     left: 50%;
     transform: translateX(-50%);
 }
-.padding-text{
 
-}
 .canvas-container {
   position: relative;
 
@@ -110,6 +121,22 @@ canvas {
  width: auto; 
   height: auto;
   }
+  .text {
+    position: absolute;
+    
+    font-family:"Monument";
+    font-size: 16px;
+    opacity: 0;
+    color: white;
+    top: auto;
+    left: 0;
+    right: 0;
+  }
+  .padding-text{
+    padding: 15px;
+    
+    text-align: center;
+  }
 }
 @media only screen and (max-width: 425px) {
 
@@ -125,13 +152,14 @@ canvas {
   position: absolute;
   top: inherit;
   font-family:"Monument";
-  font-size: 0.7rem;
+  font-size: 16px;
   opacity: 0;
   color: white;
+  left:0;
+  right: 0;
 }
 .padding-text{
-  padding-right: 15px;
-  left: 35px;
+  padding: 15px;
   text-align: center;
 }
 } 
@@ -145,7 +173,7 @@ canvas {
   align-items: center;
     }
   .layout .feature-section .navigate {
-      padding: 2px;
+      padding: 15px;
       text-shadow: 0 0 1rem rgb(0 0 0 / 50%);
   }
   
@@ -171,6 +199,19 @@ canvas {
     margin-bottom: 0;
     color: #fff ;
   }
+  .menu-metastore{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    margin-top: 25px;
+  
+  }
+
+ 
   @media (max-width: 768px){
   .layout .feature-section {
     display: flex;
@@ -178,13 +219,24 @@ canvas {
     bottom: unset;
     width: 100%;
     text-align: right;
-    left: auto;
+    left: 0;
     top: 0;
     padding-top: 1rem;
     box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
     backdrop-filter: blur(1px);
     align-items: center;
   }
+  
+.menu-metastore {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    top: unset;
+    z-index: 4;
+    margin-right: 3px;
+    margin-bottom: 10px;
+}
+
   }
   .layout .common-left-text .text {
       margin-bottom: 0;
@@ -196,23 +248,21 @@ canvas {
       color: #fff;
       margin: 0 0.25rem;
   }
+/* menu metastore */
 
 /* music */
   
 #player-container #play-pause {
   cursor: pointer;
   text-indent: -999999px;
-  height:40px;
+  height: 40px;
   width: 40px;
-  padding: 12px 18px;
+  padding: 0px 0px;
   z-index: 2;
-    
-    background-repeat: no-repeat!important;
-    background-position: center;
-    background-size: 16px;
-  background-repeat:no-repeat;
+  background-image: url(./assets/logo-pauses.png);
+
   background-position:center;
-  background-size:50px;
+  background-size:45px;
   
 }
 .play {
@@ -230,9 +280,9 @@ canvas {
   left: 50%;
   top: 50%;
   z-index: 2;
-  width: 50px;
-  height: 50px;
-  margin: -76px 0 0 -76px;
+  width: 100px;
+  height: 100px;
+  margin: -50px 0 0 -50px;
   border: 16px solid #f3f3f3;
   border-radius: 50%;
   background-image: url(./assets/logo-pause.png);
@@ -241,7 +291,25 @@ canvas {
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 }
-
+@media (max-width: 768px){
+  #loader {
+    position: fixed;
+    display: inline-block;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    margin: -50px 0 0 -50px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    background-image: url(./assets/logo-pause.png);
+    background-size: cover;  
+    border-top: 16px solid #3498db;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+}
 @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }
   100% { -webkit-transform: rotate(360deg); }
@@ -276,3 +344,20 @@ canvas {
   display: none;
   text-align: center;
 }
+
+.text-blank{
+  margin:auto;
+  
+}
+.text-stop{
+  margin:auto;
+  position: absolute;
+  top: inherit;
+  font-family:"Monument";
+  font-size: 1.5em;
+  margin: 25px;
+  opacity: 0;
+  color: white;
+  text-align: center;
+}
+

@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- css -->
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body onload="myFunction() " >
 <!-- loader -->
 
-<div id="loader" style="background-color: black;"></div>
+<div id="loader"  style="background-color: black;"></div>
     <div  id="content" class="animate-bottom" style="display:none;" >
     <canvas id="image-scroll"></canvas>   
   
-          
-
-    <!-- navigation -->
+    <!-- navigation top -->
+    <div class="menu-metastore">
+      <a href="https://metastore.pridenjoyco.gg" type="button" class="btn btn-outline-primary btn-sm" style="color:white;">Metastore</a>
+    </div>
+    <!-- navigation bottom -->
     <div class="layout" >
         <p class="sticky-text-left">    
         The Saga of Theopolis
@@ -25,7 +30,7 @@
         SCROLL
        </p>
 
-      <div class="feature-section">
+      <div class="feature-section" style="padding:15px;">
             <a class="btn text-white navigate" style="color: white; text-decoration: none;" target="_blank" rel="noopener noreferrer" href="#">COLLECTION</a>            
                 <audio autoplay loop id="track">
                   <source src="musicbg.mp3" type="audio/mpeg" />
@@ -35,37 +40,89 @@
                   <div id="play-pause" class="play"></div>
                 </div>
                 
-                <a  style="color: white; text-decoration: none;" href="https://opensea.io/" 
-                target="_blank" rel="noopener noreferrer">Open Sea</a>
+                <a href="https://oncyber.io" style="padding:15px;" ><img src="./assets/oncyber.png" style="width: 45px;"> </a>
         </div>
     <!-- div loading -->
       </div>     
               
 </div>
+
     <div class="text-container">
         
+        <span class="text-blank text0">
+        
+        </span>
       
         <span class="text text1">
             welcome to The Saga of Theopolis
         </span>
+
+        <div class="container-fluid">
         <span class="text text2">
             Special Season Article Release
         </span>
+        </div>
+      
+      
+        <div class="container">
         <span class="text text3 padding-text">
           
-        Special Season Article Release
-        5 Mid-weight Selvedge Denim
+          Special Season Article Release</br>
+          5 Mid-weight Selvedge Denim
+        
+          </span>
       
-        </span>
+         </div>
+      
+
+        <div class="container">
         <span class="text text4 padding-text">
-            The Story
+            <b>The Story</b></br>
 			  Somewhere on Earth, there is a majestic city in the middle of a giant 
-                desert, named Theopolis. The people have beliefs on 5 Lords; Taj, 
-                Nephthys, Nubia, Sydna, and Khamun.
+        desert, named Theopolis. The people have beliefs on 5 Lords; Taj, 
+        Nephthys, Nubia, Sydna, and Khamun.
 
         </span>
       </div>
+      <span class="text">
+        
+      </span>
       
+      <div class="container">
+        <span class="text text5 padding-text">
+          <b>Each article has its own story and character
+        Taj</b> is 15 oz black on black selvedge denim in red-line illustrated by The  
+        Lord among Lords. <b>Nephthys</b> is 14 oz blue indigo selvedge denim in
+         gold-line illustrated as The Goddess of Lust. 
+        
+        </span>
+      </div>
+
+        <div class="container">
+          
+          <span class="text">
+        
+          </span>
+          <span class="text">
+        
+          </span>
+        <span class="text text5 padding-text">
+          <b>Nubia</b> is 11 oz blue indigo denim selvedge in red-line illustrated as the 
+          Lord of Death.<b> Sydna</b> is 14 oz medium indigo denim selvedge in red-line
+          illustrated as The Guardian of The Underworld Gate. <b>Khamun</b> is 15 oz 
+          deep indigo in red-line illustrated as The Tomb King.
+
+        </span>
+      </div>
+      <span class="text">
+        
+      </span>
+      <span class="text">
+        
+      </span>
+    >
+      
+    </div>
         <!-- image scroll -->
             
        
@@ -74,16 +131,18 @@
 <!-- js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 <script src="main.js"></script>
 <script src="scroll.js"></script>
 <script src="music.js"></script>
 
 <!-- loader -->
 <script>
-    var myVar;
+    var opening;
     
     function myFunction() {
-      myVar = setTimeout(showPage, 3000);
+      opening = setTimeout(showPage, 3000);
     }
     
     function showPage() {

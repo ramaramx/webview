@@ -1,16 +1,34 @@
 gsap.registerPlugin(ScrollTrigger);
 
-let tl = gsap.timeline({scrollTrigger: {
+let tl = gsap.timeline({
+  scrollTrigger: {
     trigger: ".text-container",
     start: 0,
-    end: "+=8000", // stay pinned for 1000 pixels (make this whatever you want)
+    end: "+=30000", // stay pinned for 1000 pixels (make this whatever you want)
     markers: {startColor: "#00000000", endColor: "#00000000", fontSize: "12px"},
-    scrub: true,
+    scrub: 2,
     pin: true,
+    
     
   }});
 
-let stayTime = 2; // seconds between each text flip on the timeline (not literally seconds on screen - we're just spacing them out on the timeline)
+  tl.from('.text-container .text-blank', {
+    duration: 1, 
+    delay: 0.5,
+    x: '+=200px', 
+    y: '100%', 
+    autoAlpha: 0, 
+    rotation:'360',
+    ease: "linear",
+  }).to('.text-container .text', {
+      duration: 1,
+      scale: 1, 
+      ease: "linear", 
+      opacity: 0,
+      delay: 0.5,
+    });
+
+let stayTime = 5; // seconds between each text flip on the timeline (not literally seconds on screen - we're just spacing them out on the timeline)
 let textElements = gsap.utils.toArray(".text" ); // get an Array of all the ".text" elements
 // let scrolltextElements = gsap.utils.toArray(".sticky-text-left")
 
@@ -24,11 +42,3 @@ textElements.forEach((el, i) => {
 // add some space at the end of the timeline so the last one stays for the correct duration before things get unpinned.
 tl.set({}, {delay: stayTime});
 
-// scrolltextElements.forEach((el, i) => {
-//     tl.set(el, {autoAlpha: 1}, i * stayTime);
-//     if (i !== 0) { 
-//       tl.set(textElements[i - 1], {autoAlpha: 0}, i * stayTime);
-//     }
-//   });
-  
-//   tl.set({}, {delay: stayTime});
