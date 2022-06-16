@@ -11,13 +11,7 @@
   
 }
 
-p{
-  font-size: 15px;
-  font-weight: 700;
-  color: white;
-  text-shadow: 3px -8px 2px rgb(0 0 0 / 18%);
-  font-family: sans-serif;
-}
+
 
 @font-face {
     font-family: 'Monument';
