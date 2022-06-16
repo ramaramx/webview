@@ -10,6 +10,8 @@
   font-family: 'Monument';
   
 }
+
+
 @font-face {
     font-family: 'Monument';
     src: url('https://assets.codepen.io/4086427/MonumentExtended-Bold.otf');
@@ -23,7 +25,7 @@
     src: url('https://assets.codepen.io/4086427/RationalDisplay-Light.otf');
  }
 
-.text-container {
+.scroll-content {
   position: static;
   display: flex;
   justify-content: center;
@@ -53,7 +55,8 @@
 .layout {
   width: 100vw;
   height: 100vh;
-  padding: 0rem 0rem;
+  height: calc(var(--vh,1vh) * 100);
+  padding: 2rem 3rem;
   color: #fff;
   position: fixed;
   z-index: 2;
@@ -83,6 +86,18 @@
     bottom: 0rem;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.layout .menu-metastore{
+  position: fixed;
+  top: 0;
+  right: 0;
+  
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  margin-top: 25px;
+  
 }
 
 .canvas-container {
@@ -171,10 +186,12 @@ canvas {
   right: 2rem;
   bottom: 1rem;
   align-items: center;
+  
     }
   .layout .feature-section .navigate {
       padding: 15px;
       text-shadow: 0 0 1rem rgb(0 0 0 / 50%);
+      
   }
   
   .layout .lightup, .layout a, .sequence-box a {
@@ -191,6 +208,7 @@ canvas {
     z-index: 0;
     display: flex;
     justify-content: space-between;
+    
   }
   .layout .common-left-text .title {
     
@@ -199,18 +217,28 @@ canvas {
     margin-bottom: 0;
     color: #fff ;
   }
-  .menu-metastore{
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 4;
-    display: flex;
-    align-items: center;
-    margin-right: 30px;
-    margin-top: 25px;
   
+  .scroll-image{
+    height: 50%;
+    overflow: auto;
+  }
+   
+   .scroll-image .section-product{
+    position: fixed; /* Stay fixed */
+  top: 2000px;
+  left: 50%;
+  height: 1900px;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+   width: 100%;
+    clip-path: polygon(0 2%,100% 0,100% 98%,0 100%);
+    background-image: url(./assets/texture.jpg);
+    background-repeat: repeat;
+    padding: 10rem 0;
+    
   }
 
+  
  
   @media (max-width: 768px){
   .layout .feature-section {
@@ -361,3 +389,19 @@ canvas {
   text-align: center;
 }
 
+.img-social{
+  padding: 5px;
+  width: 3rem;
+  height: auto;
+  transition: .2;
+  z-index: 99;
+}
+
+.section-product .benefit{
+  position: absolute;
+  color: white;
+    margin-top: 0;
+    right: 1.7rem;
+    letter-spacing: 2px;
+    z-index: 1023;
+}

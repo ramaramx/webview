@@ -2,9 +2,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 let tl = gsap.timeline({
   scrollTrigger: {
-    trigger: ".text-container",
+    trigger: ".scroll-content",
     start: 0,
-    end: "+=30000", // stay pinned for 1000 pixels (make this whatever you want)
+    end: "+=25000", // stay pinned for 1000 pixels (make this whatever you want)
     markers: {startColor: "#00000000", endColor: "#00000000", fontSize: "12px"},
     scrub: 2,
     pin: true,
@@ -12,7 +12,7 @@ let tl = gsap.timeline({
     
   }});
 
-  tl.from('.text-container .text-blank', {
+  tl.from('.scroll-content .text-blank', {
     duration: 1, 
     delay: 0.5,
     x: '+=200px', 
@@ -20,7 +20,7 @@ let tl = gsap.timeline({
     autoAlpha: 0, 
     rotation:'360',
     ease: "linear",
-  }).to('.text-container .text', {
+  }).to('.scroll-content .text', {
       duration: 1,
       scale: 1, 
       ease: "linear", 
