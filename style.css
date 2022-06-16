@@ -11,6 +11,13 @@
   
 }
 
+p{
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 3px -8px 2px rgb(0 0 0 / 18%);
+  font-family: sans-serif;
+}
 
 @font-face {
     font-family: 'Monument';
@@ -90,7 +97,7 @@
 
 .layout .menu-metastore{
   position: fixed;
-  top: 0;
+  top: unset;
   right: 0;
   
   display: flex;
@@ -225,9 +232,9 @@ canvas {
    
    .scroll-image .section-product{
     position: fixed; /* Stay fixed */
-  top: 2000px;
+  top: 1900px;
   left: 50%;
-  height: 1900px;
+  height: 2100px;
   transform: translate(-50%, -50%);
   z-index: 1;
    width: 100%;
