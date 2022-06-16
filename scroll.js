@@ -4,9 +4,9 @@ let tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".scroll-content",
     start: 0,
-    end: "+=25000", // stay pinned for 1000 pixels (make this whatever you want)
+    end: "+=18000", // stay pinned for 1000 pixels (make this whatever you want)
     markers: {startColor: "#00000000", endColor: "#00000000", fontSize: "12px"},
-    scrub: 2,
+    scrub: true,
     pin: true,
     
     
