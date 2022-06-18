@@ -7,15 +7,15 @@
   margin: 0 auto;  
   height: 100vh;
   background-color: black;
-  font-family: 'Monument';
+  font-family: 'poppins';
   
 }
 
 
 
 @font-face {
-    font-family: 'Monument';
-    src: url('https://assets.codepen.io/4086427/MonumentExtended-Bold.otf');
+    font-family: 'poppins';
+    src: url('https://assets.codepen.io/4086427/poppinsExtended-Bold.otf');
  }
 @font-face {
     font-family: 'Rational';
@@ -37,9 +37,11 @@
   /*background-color: blue;*/
 }
 .text {
+  text-shadow:  -5px 4px rgb(0 0 0 / 15%);
+  font-weight: 500;
   position: absolute;
   top: inherit;
-  font-family:"Monument";
+  font-family:"poppins";
   font-size: 1.5em;
   margin: 25px;
   opacity: 0;
@@ -67,6 +69,7 @@
 @media (max-width: 767.98px){
   .layout{padding: 2rem 1.5rem;
   }
+  
 }
 .layout .sticky-text-left{
   width: 85vh;
@@ -79,10 +82,12 @@
   z-index: 3;
   display: flex;
   justify-content: space-between;
+  font-weight: 600;
 }
 
 .layout .sticky-text-bottom{
-  position: absolute;
+    font-weight: 600;
+    position: absolute;
     z-index: 3;
     bottom: 0rem;
     left: 50%;
@@ -96,8 +101,8 @@
   
   display: flex;
   align-items: center;
-  margin-right: 30px;
-  margin-top: 25px;
+  margin-right: 15px;
+  margin-bottom: 15px;
   
 }
 
@@ -140,7 +145,7 @@ canvas {
   .text {
     position: absolute;
     
-    font-family:"Monument";
+    font-family:"poppins";
     font-size: 16px;
     opacity: 0;
     color: white;
@@ -149,7 +154,7 @@ canvas {
     right: 0;
   }
   .padding-text{
-    padding: 15px;
+    top: 0;
     
     text-align: center;
   }
@@ -167,16 +172,29 @@ canvas {
 .text {
   position: absolute;
   top: inherit;
-  font-family:"Monument";
-  font-size: 16px;
+  font-family:"poppins";
+  font-size: 12px;
   opacity: 0;
   color: white;
   left:0;
   right: 0;
 }
 .padding-text{
-  padding: 15px;
+  top: 0;
   text-align: center;
+}
+.layout .sticky-text-left{
+  font-size: 12px;
+  width: 85vh;
+  transform: rotate(270deg);
+  position: absolute;
+  margin-bottom: 0;
+  left: 3vw;
+  bottom: 1vw;
+  transform-origin: left top;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
 }
 } 
 
@@ -188,11 +206,12 @@ canvas {
   bottom: 1rem;
   align-items: center;
   
+  
     }
   .layout .feature-section .navigate {
       padding: 15px;
       text-shadow: 0 0 1rem rgb(0 0 0 / 50%);
-      
+      font-weight: 600;
   }
   
   .layout .lightup, .layout a, .sequence-box a {
@@ -382,7 +401,7 @@ canvas {
   margin:auto;
   position: absolute;
   top: inherit;
-  font-family:"Monument";
+  font-family:"poppins";
   font-size: 1.5em;
   margin: 25px;
   opacity: 0;
@@ -391,11 +410,16 @@ canvas {
 }
 
 .img-social{
-  padding: 5px;
+  padding: 1px;
   width: 3rem;
   height: auto;
   transition: .2;
   z-index: 99;
+}
+
+.img-social:hover{
+  background-color:rgba(255, 255, 255, 0.178);
+  padding: 2px;
 }
 
 .section-product .benefit{
@@ -405,4 +429,8 @@ canvas {
     right: 1.7rem;
     letter-spacing: 2px;
     z-index: 1023;
+}
+
+.font-weight{
+  font-weight: 600;
 }
