@@ -52,28 +52,49 @@ body{
   margin-right: auto;
   width: 50%;
 }
+
+.margin-text{
+  margin-top:250px;
+}
 /* media queries */
 @media (max-width: 768px){
   .text-image{
+    margin-top: 10px;
+    text-align: center;
     font-size: 16px;
     z-index: 2; 
-    position: absolute; 
+    position: relative; 
     top: 20%;
     left: 2%;
   }
   .text-padding{
+    text-align: center;
     font-size: 12px;
-    width: 300px;
+    width: 100%;
     z-index: 2; 
-    position: absolute; 
-    top: 16%;
-    left: 2%;
+    position: inherit; 
+    
   }
 
   .size{
     width: 512px;
     height: 512px;
   }
-  
+  .margin-text{
+    margin-top:0px;
+  }
+}
+.img-social{
+  padding: 1px;
+  width: 3rem;
+  height: auto;
+  transition: .2;
+  z-index: 99;
+  filter: invert(1);
+}
+
+.img-social:hover{
+  background-color:rgba(255, 255, 255, 0.178);
+  padding: 2px;
 }
 
