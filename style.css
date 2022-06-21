@@ -379,9 +379,9 @@ canvas {
    
    .scroll-image .section-product{
     position: absolute; /* Stay fixed */
-  top: 1900px;
+  top: 14000px;
   left: 50%;
-  height: 1700px;
+  height: 1900px;
   transform: translate(-50%, -50%);
   z-index: 1;
    width: 100%;
