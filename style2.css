@@ -2,13 +2,25 @@
 
 body{
   font-family: 'poppins';
+  background-color: #878787;
+  color: white;
 }
 
+/* navbar */
+.bg-light {
+  background-color: #878787!important;
+}
+/* end */
 .card{
-  border: 10px solid rgba(0, 0, 0, 0);
+  border: 2px solid rgba(0, 0, 0, 0);
+  
+  background-color: #fce9bc;
+}
+
+.card-img{
   transition: transform .5s;
 }
-.card:hover{
+.card-img:hover{
   transform: scale(1.02);
 }
 
@@ -29,6 +41,17 @@ body{
 }
 
 
+.cyber-screen{
+  height: 150%;
+  margin-left: 15%;
+}
+
+.center-background {
+  display: block;
+  margin-left: 50px;
+  margin-right: auto;
+  width: 100%;
+}
 
 .text-image{
   font-size: 32px;
@@ -45,6 +68,7 @@ body{
   position: absolute; 
   top: 35%;
   left: 5%;
+  margin-top: 5rem;
 }
 
 .center-background{
@@ -57,6 +81,19 @@ body{
 .margin-text{
   margin-top:250px;
 }
+
+.tab-phone{
+ width: 50%;
+}
+
+.section2{
+  max-width: 100%;
+  display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
 /* media queries */
 @media (max-width: 768px){
   .text-image{
@@ -74,6 +111,7 @@ body{
     width: 100%;
     z-index: 2; 
     position: inherit; 
+    margin-top: 1rem;
     
   }
 
@@ -85,29 +123,75 @@ body{
     margin-top:0px;
   }
 
-  .image-section-one{
-    width: 0px;
-    height: 0px;
-    min-width: 100%;
-    max-width: 100%;
-    min-height: 100%;
-    max-height: 100%;
+
+
+
+  .img-magnifier-glass {
+    position: absolute;
+    border: 2px solid #000;
+    border-radius: 50%;
+    cursor: none;
+    background: url(./assets/section-3.png);
+    /*Set the size of the magnifier glass:*/
+    width: 100px;
+    height: 100px;
   }
+
+  .cyber-screen{
+    height: 100%;
+    margin-left: 0;
+  }
+
+  .tab-phone{
+    width: 100%;
+  }
+
+  .section2{
+    max-width: 100%;
+    display: flex;
+      flex-direction: column;
+      font-size: 1rem;
+      line-height: 1.5rem;
+  }
+
+  .center-background {
+    display: block;
+    margin-left: 30px;
+    margin-right: auto;
+    width: 100%;
+  
 }
 
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: -19;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x) * 0);
+  margin-left: calc(var(--bs-gutter-x) * 0);
+ 
+}
 
+.col-4 {
+  flex: 0 0 auto;
+  width: 33.33333333%;
+  padding-right: calc(var(--bs-gutter-x) * 0.1);
+  padding-left: calc(var(--bs-gutter-x) * 0.1);
+}
+}
 
+/* footer */
 .img-social{
   padding: 1px;
   width: 3rem;
   height: auto;
   transition: .2;
   z-index: 99;
-  filter: invert(1);
+  filter: invert(0);
 }
 
 .img-social:hover{
   background-color:rgba(255, 255, 255, 0.178);
   padding: 2px;
 }
-
