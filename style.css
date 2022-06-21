@@ -18,7 +18,7 @@
   align-items: center;
   height: 20vh;
   width: 100%;
-  z-index: 2;
+  
   /*background-color: blue;*/
 }
 .text {
@@ -36,6 +36,7 @@
   right: 0;
   top: 0;
   bottom: 50px;
+  
   
 }
 
@@ -116,24 +117,24 @@
   }
 
   .text1{
-    font-size: 1rem;
+    font-size: 1.3rem;
     top: 100%;
   }
   
   .text2{
-    font-size: 1rem;
+    font-size: 1.3rem;
     top: 50%;
   }
   
   .text3{
-    font-size: 1rem;
+    font-size: 1.3rem;
       margin-top: 4%;
       margin-bottom: -2%;
       z-index: -1;
   }
   
   .text3-kecil{
-    font-size: .7rem;
+    font-size: 1rem;
   }
   
   .text4{
@@ -152,15 +153,17 @@
   .text5{
     font-size: 24px;
     top: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
     text-shadow: 2px 2px 20px rgba(0,0,0,0.8);
   }
   
   .text5-kecil{
     font-size: .9rem;
     margin-top: -5%;
-    margin-bottom: 1%;
-    margin-left: 0;
-    margin-right: 0;
+    margin-bottom: -4%;
+    margin-left: 16%;
+    margin-right: 16%;
     text-shadow: 2px 2px 20px rgba(0,0,0,0.8);
   }
   
@@ -251,7 +254,7 @@ canvas {
 .text-content-benefit{
  z-index: 4; 
 }
-@media only screen and (max-width: 1024px) {
+
   
   canvas {
     z-index: -1;
@@ -262,7 +265,7 @@ canvas {
  width: 100vw; 
   height: 100vh;
   }
-}
+
 
 
 @media only screen and (max-width: 768px) {
@@ -278,7 +281,7 @@ canvas {
     position: absolute;
     
     font-family:"poppins";
-    font-size: 16px;
+    
     opacity: 0;
     color: white;
     top: auto;
@@ -287,9 +290,24 @@ canvas {
   }
   .padding-text{
     top: 0;
-    margin: 50px;
+    margin: 10px;
     text-align: center;
   }
+  .title-content-benefit{
+    font-weight: 900;
+    font-size: 2.5rem;
+    margin-top: -70px;
+    text-align:center;
+  }
+
+  .text-content-benefit{
+    z-index: 4; 
+    text-align: center;
+   }
+   .wrap-button{
+    margin-left: 0;
+    margin-right: 0;
+   }
 }
 @media only screen and (max-width: 425px) {
 
@@ -374,6 +392,7 @@ canvas {
     height: 100vh;
     transform: none;
     overflow: auto;
+    z-index: 2;
     
   }
    
@@ -561,3 +580,9 @@ canvas {
 .font-weight{
   font-weight: 600;
 }
+
+.wrap-button{
+  margin-right: 200px;
+  background-color: #093f66;
+  border-color: #093f66;
+ }
