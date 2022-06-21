@@ -7,24 +7,9 @@
   margin: 0 auto;  
   height: 100vh;
   background-color: black;
-  font-family: 'poppins';
+  font-family: 'Poppins', sans-serif;;
   
 }
-
-
-
-@font-face {
-    font-family: 'poppins';
-    src: url('https://assets.codepen.io/4086427/poppinsExtended-Bold.otf');
- }
-@font-face {
-    font-family: 'Rational';
-    src: url('https://assets.codepen.io/4086427/Rene+Bieder+-+RationalDisplayDEMO-SemiBold.otf');
- }
-@font-face {
-    font-family: 'Rational-light';
-    src: url('https://assets.codepen.io/4086427/RationalDisplay-Light.otf');
- }
 
 .scroll-content {
   position: static;
@@ -121,6 +106,35 @@ canvas {
   height: 100%;
 
 }
+
+.new{
+  z-index: -1;
+  opacity: 1;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  
+}
+
+@keyframes floating {
+  
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 5px); }
+  100%   { transform: translate(0, -0px); }   
+}
+
+
+.title-content-benefit{
+  font-weight: 900;
+  font-size: 2.5rem;
+  margin-top: -200px
+
+}
+
+.text-content-benefit{
+ z-index: 4; 
+}
 @media only screen and (max-width: 1024px) {
   
   canvas {
@@ -133,6 +147,8 @@ canvas {
   height: 100vh;
   }
 }
+
+
 @media only screen and (max-width: 768px) {
   
   canvas {
@@ -155,7 +171,7 @@ canvas {
   }
   .padding-text{
     top: 0;
-    
+    margin: 50px;
     text-align: center;
   }
 }
@@ -244,17 +260,17 @@ canvas {
   }
    
    .scroll-image .section-product{
-    position: fixed; /* Stay fixed */
-  top: 1900px;
+    position: absolute; /* Stay fixed */
+  top: 1500px;
   left: 50%;
-  height: 2100px;
+  height: 2020px;
   transform: translate(-50%, -50%);
   z-index: 1;
    width: 100%;
     clip-path: polygon(0 2%,100% 0,100% 98%,0 100%);
     background-image: url(./assets/texture.jpg);
     background-repeat: repeat;
-    padding: 10rem 0;
+    
     
   }
 

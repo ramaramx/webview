@@ -22,9 +22,10 @@ body{
   border: 10px solid #000;
   border-radius: 50%;
   cursor: none;
+  background: url(./assets/section-3.png);
   /*Set the size of the magnifier glass:*/
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
 }
 
 
@@ -50,7 +51,7 @@ body{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 60%;
 }
 
 .margin-text{
@@ -83,7 +84,19 @@ body{
   .margin-text{
     margin-top:0px;
   }
+
+  .image-section-one{
+    width: 0px;
+    height: 0px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+  }
 }
+
+
+
 .img-social{
   padding: 1px;
   width: 3rem;
