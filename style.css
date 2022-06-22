@@ -139,13 +139,39 @@
   z-index: 2;
   top: 0;
 }
-
-@media (max-width: 768px){
-  .layout{padding: 2rem 1.5rem;
+.wrap-button{
+  margin-right: 20%;
+  background-color: #093f66;
+  border-color: #093f66;
+ }
+@media only screen and  (max-width: 768px){
+  .layout{
+    padding: 2rem 1.5rem;
+  }
+  .text {
+    text-shadow: 2px 2px 20px rgba(0,0,0,0.8);
+    font-weight: 500;
+    position: absolute;
+    top: inherit;
+    font-family:"poppins";
+    font-size: 1.5em;
+    margin: 25px;
+    opacity: 0;
+    color: white;
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 50px;
   }
 
+  .padding-text{
+    
+    margin-top: -10%;
+    text-align: center;
+  }
   .text1{
-    font-size: 1.3rem;
+    font-size: 2rem;
     top: 100%;
   }
   
@@ -154,10 +180,9 @@
     top: 50%;
   }
   
-  .text3{
+  .text .text3{
     font-size: 1.3rem;
-      margin-top: 4%;
-      margin-bottom: -2%;
+    margin-top: 50%;
       z-index: -1;
   }
   
@@ -167,8 +192,10 @@
   
   .text4{
     font-size: 32px;
-    right: 50%;
+    margin-left: -1%;
+    margin-right: 0%;
     text-shadow: 2px 2px 20px rgba(0,0,0,0.8);
+    text-align: start;
   }
   
   .text4-kecil{
@@ -179,20 +206,23 @@
   }
   
   .text5{
-    font-size: 24px;
-    top: 100%;
+    font-size: 18px;
+    top: -5%;
     margin-left: 10%;
     margin-right: 10%;
     text-shadow: 2px 2px 20px rgba(0,0,0,0.8);
+    text-align: start;
   }
   
   .text5-kecil{
-    font-size: .9rem;
-    margin-top: -5%;
-    margin-bottom: -4%;
-    margin-left: 16%;
-    margin-right: 16%;
-    text-shadow: 2px 2px 20px rgba(0,0,0,0.8);
+ 
+    margin-top: -7%;
+    margin-bottom: 9%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-shadow: 2px 2px 20px rgb(0 0 0 / 80%);
+    font-size: 12px;
+    text-align: start;
   }
   
   .text6{
@@ -274,9 +304,9 @@ canvas {
 
 .title-content-benefit{
   font-weight: 900;
-  font-size: 3rem;
+  font-size: 2.7rem;
   margin-top: -70px;
-  text-shadow: 3px -11px 10px rgb(0 0 0 / 100%);
+  text-shadow: 3px 1px 10px rgb(0 0 0 / 100%);
 }
 
 .text-content-benefit{
@@ -310,50 +340,35 @@ canvas {
  width: auto; 
   height: auto;
   }
-  .text {
-    position: absolute;
-    
-    font-family:"poppins";
-    
-    opacity: 0;
-    color: white;
-    top: auto;
-    left: 0;
-    right: 0;
+  .wrap-button {
+    margin-right: 0%;
+    background-color: #093f66;
+    border-color: #093f66;
   }
-  .padding-text{
-    top: 0;
-    margin: 10px;
-    text-align: center;
-  }
+
+
   .title-content-benefit{
     font-weight: 900;
     font-size: 2rem;
     margin-top: -70px;
-    text-shadow: 10px -4px 9px rgb(0 0 0);
+    text-shadow: 6px 9px 10px rgb(0 0 0);
     text-align: center;
   }
   
 
-  .text-content-benefit{
-    z-index: 4; 
-    text-align: center;
-   }
+  
    
-   .wrap-button{
-    margin-left: 0;
-    margin-right: 10px;
-   }
-
+  
    .text-content-benefit{
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     color: white;
-    text-shadow: 3px -8px 2px rgb(0 0 0 / 18%);
+    text-shadow: 7px 7px 7px rgb(0 0 0);
     font-family: sans-serif;
+    text-align: center;
   }
 }
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 768px) {
 
   canvas {
     z-index: -1;
@@ -363,20 +378,22 @@ canvas {
     height: auto;
     
 }
-.text {
+.layout .sticky-text-left {
+  width: 85vh;
+  transform: rotate(270deg);
   position: absolute;
-  top: inherit;
-  font-family:"poppins";
+  margin-bottom: 0;
+  left: 3vw;
+  bottom: 1vw;
+  transform-origin: left top;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
   font-size: 12px;
-  opacity: 0;
-  color: white;
-  left:0;
-  right: 0;
 }
-.padding-text{
-  top: 0;
-  text-align: center;
-}
+
+
 .layout .sticky-text-left{
   font-size: 12px;
   width: 85vh;
@@ -448,7 +465,7 @@ canvas {
   transform: translate(-50%, -50%);
   z-index: 1;
    width: 100%;
-    clip-path: polygon(0 1%,100% 0,100% 98%,0 100%);
+    
     background-image: url(./assets/texture.jpg);
     background-repeat: repeat;
     
@@ -457,7 +474,7 @@ canvas {
 
   
  
-  @media (max-width: 768px){
+  @media only screen and  (max-width: 768px){
   .layout .feature-section {
     display: flex;
     justify-content: center;
@@ -536,7 +553,7 @@ canvas {
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 }
-@media (max-width: 768px){
+@media only screen and (max-width: 768px){
   #loader {
     position: fixed;
     display: inline-block;
@@ -625,8 +642,3 @@ canvas {
   font-weight: 600;
 }
 
-.wrap-button{
-  margin-right: 20%;
-  background-color: #093f66;
-  border-color: #093f66;
- }
