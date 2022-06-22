@@ -47,13 +47,29 @@
   filter: blur(40px);} */
 
 .text1{
+  font-weight: 800;
   font-size: 2.5rem;
-  top: 100%;
+  top: 190%;
+  text-shadow: rgba(255, 255, 255, 100) 0px 0px 24px;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 0 #cec6c6 , 0 0 0 #cec6c6, 0 0 0 #cec6c6, 0 0 0 #cec6c6, 0 0 0 #cec6c6, 0 0 0 #cec6c6, 0 0 12px #cec6c6;
+  }
+  to {
+    text-shadow: 0 0 0 #cec6c6, 0 0 0 #cec6c6, 0 0 12px #cec6c6, 0 0 50px #cec6c6, 0 0 24px #cec6c6, 0 0 40px #cec6c6, 0 0 40px #cec6c6;
+  }
 }
 
 .text2{
   font-size: 2.5rem;
   top: 50%;
+  text-shadow: rgba(255, 255, 255, 100) 0px 0px 24px;
 }
 
 .text3{
@@ -61,38 +77,50 @@
     margin-top: 4%;
     margin-bottom: -2%;
     z-index: -1;
+    text-shadow: rgba(43, 43, 43, 100) 0px 0px 24px;
 }
 
 .text3-kecil{
-  font-size: 1.5rem;
+  font-weight: 500;
+  font-size: 1.3rem;
+  text-shadow: rgba(43, 43, 43, 100) 0px 0px 24px;
+  letter-spacing: 2;
 }
 
 .text4{
   font-size: 64px;
   right: 50%;
-  text-shadow: 2px 2px 20px rgba(0,0,0,0.8);
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: -1%;
+  text-align: start;
 }
 
 .text4-kecil{
   font-size: 1.2rem;
-  margin-left: 5%;
-  margin-right: 5%;
-  text-shadow: 2px 2px 20px rgba(0,0,0,0.8);
+  margin-left: 10%;
+  margin-right: 10%;
+  text-shadow: rgba(255, 255, 255, 100) 0px 0px 24px;
+  text-align: start;
 }
 
 .text5{
   font-size: 42px;
-  top: 100%;
-  text-shadow: 2px 2px 20px rgba(0,0,0,0.8);
+  top: -120%;
+  text-align: start;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-shadow:  rgba(255, 255, 255, 100) 0px 0px 24px;
 }
 
 .text5-kecil{
   font-size: 1.2rem;
-  margin-top: -5%;
-  margin-bottom: 1%;
+  margin-top: -4%;
+  margin-bottom: 4%;
   margin-left: 5%;
   margin-right: 5%;
-  text-shadow: 2px 2px 20px rgba(0,0,0,0.8);
+  text-align: start;
+  text-shadow:  rgba(255, 255, 255, 100) 0px 0px 24px;
 }
 
 .text6{
@@ -246,13 +274,18 @@ canvas {
 
 .title-content-benefit{
   font-weight: 900;
-  font-size: 2.5rem;
-  margin-top: -70px
-
+  font-size: 3rem;
+  margin-top: -70px;
+  text-shadow: 3px -11px 10px rgb(0 0 0 / 100%);
 }
 
 .text-content-benefit{
- z-index: 4; 
+  
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 3px 10px 11px rgb(0 0 0 / 100%);
+  font-family: sans-serif;
 }
 
   
@@ -295,19 +328,30 @@ canvas {
   }
   .title-content-benefit{
     font-weight: 900;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-top: -70px;
-    text-align:center;
+    text-shadow: 10px -4px 9px rgb(0 0 0);
+    text-align: center;
   }
+  
 
   .text-content-benefit{
     z-index: 4; 
     text-align: center;
    }
+   
    .wrap-button{
     margin-left: 0;
-    margin-right: 0;
+    margin-right: 10px;
    }
+
+   .text-content-benefit{
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+    text-shadow: 3px -8px 2px rgb(0 0 0 / 18%);
+    font-family: sans-serif;
+  }
 }
 @media only screen and (max-width: 425px) {
 
@@ -398,13 +442,13 @@ canvas {
    
    .scroll-image .section-product{
     position: absolute; /* Stay fixed */
-  top: 14000px;
+  top: 14200px;
   left: 50%;
-  height: 1900px;
+  height: 2000px;
   transform: translate(-50%, -50%);
   z-index: 1;
    width: 100%;
-    clip-path: polygon(0 2.3%,100% 0,100% 98%,0 100%);
+    clip-path: polygon(0 1%,100% 0,100% 98%,0 100%);
     background-image: url(./assets/texture.jpg);
     background-repeat: repeat;
     
@@ -582,7 +626,7 @@ canvas {
 }
 
 .wrap-button{
-  margin-right: 200px;
+  margin-right: 20%;
   background-color: #093f66;
   border-color: #093f66;
  }

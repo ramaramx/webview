@@ -2,7 +2,7 @@ const html = document.documentElement;
 const canvas = document.getElementById("image-scroll");
 const context = canvas.getContext("2d");
 
-const frameCount = 385;
+const frameCount = 390;
 const currentFrame = index => (
   `./assets/compres/${index.toString().padStart( '0')}.jpg`
 )
