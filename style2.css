@@ -123,6 +123,13 @@ body{
   color: #093f66;
 }
 
+.text-3{
+  font-weight: bold;
+  font-size: 64px;
+  text-shadow: 8px 6px 9px rgba(37,37,37,100);
+  text-align: center;
+}
+
 .tab-phone{
  width: 50%;
  margin-right: 5%;
