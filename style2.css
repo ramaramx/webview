@@ -142,8 +142,10 @@ body{
   height: auto;
 }
 
-.image{
-  width: 600px;
+.laftImg{
+  width: 700px;
+  margin-left: 20%;
+
 }
 
 @media only screen and  (max-width: 1024px){
@@ -171,7 +173,8 @@ body{
     left: 2%;
   }
 
-  .image{
+  .laftImg{
+    margin-left: 15%;
     width: 300px;
   }
   .text-padding{
@@ -219,7 +222,7 @@ body{
   }
   .margin-text{
     margin-top: 20px;
-    margin-left: 30px;
+    margin-left: 20px;
   }
 
 
