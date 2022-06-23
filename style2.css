@@ -142,6 +142,10 @@ body{
   height: auto;
 }
 
+.image{
+  width: 600px;
+}
+
 @media only screen and  (max-width: 1024px){
 .text-padding{
   font-size: 12px;
@@ -154,6 +158,8 @@ body{
   padding-left: 20%;
 }
 }
+
+
 @media only screen and  (max-width: 768px){
   .text-image{
     margin-top: 10px;
@@ -163,6 +169,10 @@ body{
     position: relative; 
     top: 20%;
     left: 2%;
+  }
+
+  .image{
+    width: 300px;
   }
   .text-padding{
     text-align: center;
@@ -273,7 +283,7 @@ body{
 
 .img-fluid-custom {
   max-width: 100%;
-  height: 45%;
+  height: auto;
 }
 }
 
