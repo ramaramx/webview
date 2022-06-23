@@ -305,7 +305,7 @@ canvas {
 .title-content-benefit{
   font-weight: 900;
   font-size: 2.7rem;
-  margin-top: -70px;
+  margin-top: -145px;
   text-shadow: 3px 1px 10px rgb(0 0 0 / 100%);
 }
 
@@ -346,6 +346,25 @@ canvas {
     border-color: #093f66;
   }
 
+  .scroll-image{
+    height: 100vh;
+    transform: none;
+    overflow: auto;
+    z-index: 2;
+    
+  }
+
+  .scroll-image .section-product {
+    position: absolute;
+    top: 14200px;
+    left: 50%;
+    height: 2000px;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 100%;
+    background-image: url(./assets/texture.jpg);
+    background-repeat: repeat;
+}
 
   .title-content-benefit{
     font-weight: 900;
@@ -456,21 +475,17 @@ canvas {
     z-index: 2;
     
   }
-   
-   .scroll-image .section-product{
-    position: absolute; /* Stay fixed */
-  top: 14200px;
-  left: 50%;
-  height: 2800px;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-   width: 100%;
-    
+     .scroll-image .section-product {
+    position: absolute;
+    top: 14200px;
+    left: 50%;
+    height: 2500px;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 100%;
     background-image: url(./assets/texture.jpg);
     background-repeat: repeat;
-    
-    
-  }
+}
 
   
  
