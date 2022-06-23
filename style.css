@@ -305,8 +305,9 @@ canvas {
 .title-content-benefit{
   font-weight: 900;
   font-size: 2.7rem;
-  margin-top: -145px;
-  text-shadow: 3px 1px 10px rgb(0 0 0 / 100%);
+  margin-top: -140px;
+  
+  filter: drop-shadow(2px 4px 10px black);
 }
 
 .text-content-benefit{
@@ -314,7 +315,7 @@ canvas {
   font-size: 20px;
   font-weight: bold;
   color: white;
-  text-shadow: 3px 10px 11px rgb(0 0 0 / 100%);
+  filter: drop-shadow(2px 4px 10px black);
   font-family: sans-serif;
 }
 
@@ -328,7 +329,18 @@ canvas {
  width: 100vw; 
   height: 100vh;
   }
-
+  .meta-image{
+    max-width: 70%;
+    height: auto;
+    margin-left: 10px;
+    filter: drop-shadow(2px 4px 25px black);
+  }
+  .img-fluid-icon {
+    max-width: 90%;
+    height: auto;
+    margin-left: 10px;
+    filter: drop-shadow(2px 4px 25px black);
+}
 
 
 @media only screen and (max-width: 768px) {
@@ -351,14 +363,13 @@ canvas {
     transform: none;
     overflow: auto;
     z-index: 2;
-    
   }
 
   .scroll-image .section-product {
     position: absolute;
     top: 14200px;
     left: 50%;
-    height: 2000px;
+    height: 1700px;
     transform: translate(-50%, -50%);
     z-index: 1;
     width: 100%;
@@ -372,20 +383,30 @@ canvas {
     margin-top: -70px;
     text-shadow: 6px 9px 10px rgb(0 0 0);
     text-align: center;
+    filter: drop-shadow(2px 4px 10px black);
   }
-  
-
-  
-   
-  
-   .text-content-benefit{
+ .text-content-benefit{
     font-size: 14px;
     font-weight: 500;
     color: white;
     text-shadow: 7px 7px 7px rgb(0 0 0);
     font-family: sans-serif;
     text-align: center;
+    filter: drop-shadow(2px 4px 10px black);
   }
+  .img-fluid-icon {
+    max-width: 100%;
+    height: auto;
+    margin-left: 0px;
+    filter: drop-shadow(2px 4px 25px black);
+}
+
+.meta-image{
+  max-width: 100%;
+  height: auto;
+  margin-left: 10px;
+  filter: drop-shadow(2px 4px 25px black);
+}
 }
 @media only screen and (max-width: 768px) {
 
@@ -479,7 +500,7 @@ canvas {
     position: absolute;
     top: 14200px;
     left: 50%;
-    height: 2500px;
+    height: 2200px;
     transform: translate(-50%, -50%);
     z-index: 1;
     width: 100%;
