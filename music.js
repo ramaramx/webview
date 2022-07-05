@@ -6,11 +6,11 @@ function playPause() {
     if (track.paused) {
         track.play();
         //controlBtn.textContent = "Pause";
-        controlBtn.className = "pause";
+        controlBtn.className = "play";
     } else { 
         track.pause();
          //controlBtn.textContent = "Play";
-        controlBtn.className = "play";
+        controlBtn.className = "pause";
     }
 }
 
